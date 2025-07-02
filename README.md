@@ -1,49 +1,89 @@
-AI-Based Smart Tutor
+<!-- ============================================  TITLE ======================================================  -->
+# REST API for TourNest Trip Management System
+<!-- ============================================  DETAILS ======================================================  -->
 
-📌 Project Overview
-The AI-Based Smart Tutor is an intelligent platform designed to assist students in understanding academic concepts through AI-driven features. It includes functionalities such as PDF summarization, Q&A, chatbot interactions, and quiz generation to enhance learning efficiency.
+<li>An Trip Managment Platform like MakeMyTrip or Yatra.
+<li>An developement of RESTful API for an application. This API performs all the fundamental CRUD operations of any with user validation at every step.
+<br>
 
-🚀 Features
-📄 PDF Summarizer: Extracts key points from academic PDFs.
-❓ Q&A System: Provides AI-generated answers to user queries.
-💬 Chatbot: Engages in interactive conversations to clarify doubts.
-📝 Quiz Generator: Creates quizzes based on study materials.
+<!-- ============================================  FEATURES ======================================================  -->
 
-🛠️ Tech Stack
-Backend: Django (Python)
-Frontend: HTML, CSS, JavaScript
-AI Services: Hugging Face Transformers
-Development Environment: Visual Studio Code
+  
+## Features
 
-Installation & Setup
-Prerequisites
-Python (>=3.8)
-pip
-Virtual Environment (recommended)
+* Customer and Admin authentication & validation with session uuid having.
+* Admin Features:
+    * Administrator Role of the entire application
+    * Only registered admins with valid session token can add/update/delete customer from main database
+    * Admin can access the details of different customers and trip bookings
+* Customer Features:
+    * Registering themselves with application, and logging in to get the valid session token
+    * Viewing list of available buses, packages, hotels and booking a trip
+    * Only logged in user can access his trip history, profile updation and other features.
 
-🤝 Contributing
-Contributions are welcome! Feel free to fork the repo and submit a pull request
+  
+<!-- ============================================  TECH STACK ======================================================  -->
 
-📬 Contact
-For queries, feel free to reach out:
-Developer: Sandeep Chavhan
-Email: sandeepcz8787@example.com
-GitHub: https://github.com/sandeepcz8787
+## Tech Stack
 
-Overview of AI Based Smart Tutor – Front Page 👇
-![image](https://github.com/user-attachments/assets/076bf064-a522-4fa6-bd14-e08b191aa5cf)
-![image](https://github.com/user-attachments/assets/ec8168fc-13cb-4150-9a0a-8f0c4bf5f6ab)
-![image](https://github.com/user-attachments/assets/ee17d02d-1250-4e5c-99ed-03d6b224ee97)
-![image](https://github.com/user-attachments/assets/4fd92670-3547-498e-92d1-d8154bc3d0a3)
-![image](https://github.com/user-attachments/assets/42304f52-db3f-4de0-aba8-ff3abc48abd4)
-![image](https://github.com/user-attachments/assets/449509de-e8b4-4569-b2b0-e07800cdd6ba)
-![image](https://github.com/user-attachments/assets/aac60162-1ad8-4e0b-9400-13a55dc062b2)
-![image](https://github.com/user-attachments/assets/e0b3a436-4694-4eea-a2d6-cbbc4acee41f)
-![image](https://github.com/user-attachments/assets/84f516c8-6130-41f7-884f-2cb4f7119449)
+* Java
+* Spring Framework
+* Spring Boot
+* Spring Data JPA
+* Hibernate
+* Maven
+* MySQL
+
+<!-- ============================================  MODULES ======================================================  -->
+
+## Modules
+
+* Login, Logout Module
+* Packages Module
+* Booking Module
+* TicketDetails Module
+* Route Module
+* Travels Module
+* Bus Module
+* Hotel Module
+* Report Module
+* Feedback Module
+
+<!-- ============================================  ER - DIAGRAM ======================================================  -->
+
+# ER Diagram
+
+The following Diagram depicts the flow of our Entity Relation Diagram to simplify the work flow.
+<br>
+<br>
+  
+ <img src='https://user-images.githubusercontent.com/101464018/201532557-608c199c-53cb-4b82-91d6-a5313da04eef.png'/>
 
 
+<br>
+<br>
 
+<!-- ============================================  INSTALLATION AND RUN ======================================================  -->
 
+## Installation & Run
 
+* Before running the API server, you should update the database config inside the [application.properties](TourNestTripManagementSystemApplication/src/main/resources/application.properties) file. 
+* Update the port number, username and password as per your local database config.
 
+```
+    server.port=8888
 
+    spring.datasource.url=jdbc:mysql://localhost:3306/mydb;
+    spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+    spring.datasource.username=root
+    spring.datasource.password=root
+
+```
+
+<!-- ============================================  API ROOT ENDPOINTS ======================================================  -->
+
+## API Root Endpoint
+
+`http://localhost:8888/`
+
+`http://localhost:8888/swagger-ui/`
